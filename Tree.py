@@ -2,12 +2,12 @@ from node import Node
 
 class Tree(Node):
     def __init__(self, collection):
-        self.parent = None
         self.children = []
+        self.parent = None
         Node.__init__(self, collection)
     
     def add_child(self, child):
-        child.parent = self
+        Tree(child).parent = self
         self.children.append(child)
 
     def get_level(self):
@@ -27,5 +27,5 @@ class Tree(Node):
         print(prefix + self.data)
         if self.children:
             for child in self.children:
-                child.display()
+                Tree(child).display()
         
