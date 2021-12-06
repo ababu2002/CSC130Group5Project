@@ -5,8 +5,10 @@ import json as js
 def main():
     with open('new_monarchs.json', 'r') as file:
         monarchs = js.load(file)
-    #print(js.dumps(monarchs, indent=4))
-    print(monarchs['Children'][0]['Children'][0])
+    monarch = Tree(monarchs["Name"])
+    for child in monarchs["Children"]:
+        monarch.add_child(child["Name"])
+    monarch.display()
 
 
 if __name__ == '__main__':

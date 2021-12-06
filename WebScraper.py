@@ -33,7 +33,7 @@ for row in sort_table[1].find_all('td'):
         name.append(cells[1].find(text=True))
         name.append(cells[2].find(text=True))
 
-# List of the monarchs that are int the wikipage.
+# List of the monarchs that are in the wikipage.
 monarchs = ['Eric the Victorious', 'Olof Skötkonung', 'Estrid of the Obotrites', 'Emund the Old', 'Anund Jacob',
             'Unknown name', 'Stenkil', 'Eric and Eric', 'Anund Gårdske', 'Halsten Stenkilsson', 'Inge the Elder',
             'Helena', 'Blot-Sweyn', 'Håkan the Red', 'Philip Halstensson', 'Inge the Younger', 'Ulvhild Håkansdotter',
