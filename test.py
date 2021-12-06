@@ -9,7 +9,7 @@ def main():
     for child in monarchs["Children"]:
         monarch.add_child(child["Name"])
     monarch.display()
-
+    print(monarch.children)
 
 if __name__ == '__main__':
     main()
